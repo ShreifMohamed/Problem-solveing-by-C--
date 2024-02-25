@@ -5,22 +5,23 @@
 
 int main(){
 
-double  n,k,a;
+double  a,k,n;
 std::cin>>n>>k>>a;
-double result = (n * k) / a;
-long long mynumber = result ;
-double myresult = result - mynumber ;
+long long x = (k*n) / a;
+double q = (k*n) / a ;
+ double test = q - x ;
 
-if (myresult > 0 ){
+
+if (test > 0 ){
 
     std::cout <<"double"<<std::endl; 
 }
 
-else if(mynumber <= 2147483647 ){
-    std::cout<<"int"<<std::endl;
+else if(q > 2147483647 ){
+    std::cout<<"long long"<<std::endl;
 }
 else{
-std::cout<<"long long"<<std::endl;
+std::cout<<"int"<<std::endl;
 }
 
     return 0;
